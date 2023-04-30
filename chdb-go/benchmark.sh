@@ -11,4 +11,6 @@ seq 0 99 | xargs -P100 -I{} bash -c 'wget --continue https://datasets.clickhouse
 
 # Run the queries
 
-./run.sh 2>&1 | tee log.txt
+
+# ./run.sh 2>&1 | tee log.txt
+./clickbench 2>&1 | tee log.txt
