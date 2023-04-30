@@ -27,7 +27,7 @@ func main() {
         start := time.Now()
         _ = chdb.Query(fileScanner.Text(), "CSV")
         elapsed := time.Since(start)
-        final := fmt.Sprintf("%d,%d,%.9fs", count, i, elapsed.Seconds())
+        final := fmt.Sprintf("%d,%d,%.16f", count, i, elapsed.Seconds())
         fmt.Println(final)
        }
        count++
